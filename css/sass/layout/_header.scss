@@ -1,0 +1,182 @@
+// Start Menu Styling
+
+.menu {
+    width: 250px;
+    height: 100%;
+    background-color: $whiteColor;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    transition: right 0.5s ease-in-out;
+    z-index: 10;
+    -webkit-transition: right 0.5s ease-in-out;
+    -moz-transition: right 0.5s ease-in-out;
+    -ms-transition: right 0.5s ease-in-out;
+    -o-transition: right 0.5s ease-in-out;
+    
+    .menu-wrapper h3 {
+        background-color: $menuColor;
+        color: $whiteColor;
+        text-transform: uppercase;
+        font-size: 25px;
+        letter-spacing: 1px;
+        padding: 25px 15px;
+        margin-bottom: 10px;
+        position: relative;
+
+        i {
+            cursor: pointer;
+            color: $whiteColor;
+            position: absolute;
+            left: 15px;
+        }
+    }
+
+    .menu-wrapper li {
+        padding: 20px 25px;
+        border-bottom: 1px dashed $blackColor ;
+
+        a {
+            color: #555;
+            font-size: 20px;
+            text-transform: capitalize;
+            text-decoration: none;
+            font-weight: map-get($fontWeights, "light" );
+            transition: color 0.4s ease-in-out;
+            -webkit-transition: color 0.4s ease-in-out;
+            -moz-transition: color 0.4s ease-in-out;
+            -ms-transition: color 0.4s ease-in-out;
+            -o-transition: color 0.4s ease-in-out;
+
+            &:hover {
+                color: $menuColor;
+            }
+        }
+    }
+    
+}
+
+// End Menu Styling
+
+// Start Header Styling
+
+header {
+    position: relative;
+    border-top: 10px solid $mainColor;
+    min-height: 660px;
+    @include bg-image;
+
+    @media screen and (max-width:991px) {
+        min-height: 500px;
+    }
+
+    @media screen and (max-width:576px) {
+        min-height: 400px;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding-top: 20px;
+
+        a {
+            padding-top: 15px;
+        }
+
+        i {
+            background-color: $blackColor;
+            position: fixed;
+            top: 30px;
+            right: 80px;
+            color: $whiteColor;
+            cursor: pointer;
+            border: 1px solid $whiteColor;
+            padding: 15px 20px;
+            z-index: 9;
+
+            @media screen and (max-width: 767px) {
+                right: 30px;
+            }
+        }
+    }
+
+    .banner-text {
+        color: $whiteColor;
+        text-align: center;
+        padding: 10em 0 0;
+
+        @media screen and (max-width: 479px) {
+            padding: 7em 0 0;
+        }
+        
+        h1 {
+            text-transform: uppercase;
+            font-weight: map-get($fontWeights, "bold" );
+            margin-bottom: 15px;
+            @media screen and (max-width: 767px) {
+                font-size: 32px;
+            }
+
+            @media screen and (max-width: 576px) {
+                font-size: 28px;
+            }
+
+            @media screen and (max-width: 479px) {
+                font-size: 21px;
+            }
+
+            @media screen and (max-width: 320px) {
+                font-size: 18px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            width: 54%;
+            margin: 0 auto;
+            font-weight: map-get($fontWeights, "medium" );
+
+            @media screen and (max-width: 991px) {
+                width: 80%;
+            }
+
+            @media screen and (max-width: 576px) {
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+    }
+
+    .go-to-intro {
+        padding: 14em 0 0;
+        text-align: center;
+        color: $whiteColor;
+
+        @media screen and (max-width:576px) {
+            padding: 8em 0 0;
+        }
+        span {
+            display: block;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 1px;
+            font-weight: map-get($fontWeights, "light" );
+
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+            }
+        }
+
+        img {
+            cursor: pointer;
+            padding: 15px 0;
+        }
+    }
+
+}
+
+// End Header Styling
+
+
+

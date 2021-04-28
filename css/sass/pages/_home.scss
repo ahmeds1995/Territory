@@ -1,0 +1,610 @@
+// Start Scroll To Top Styling
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+    z-index: 11;
+    
+    @media screen and (max-width:576px) {
+        right: 20px;
+    };
+
+    .scroll-img {
+        cursor: pointer;
+        display: none;
+    }
+}
+
+// End Scroll To Top Styling
+
+// Start Introduction Styling
+
+.introduction {
+    padding: $sectionPadding 0;
+
+    h2 {
+        @include secHeading;
+        
+        @media screen and (max-width:576px) {
+            font-size: 28px;
+        }
+    }
+
+    p {
+        width: 84%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.9;
+        font-weight: map-get($fontWeights, "light" );
+
+        @media screen and (max-width: 576px) {
+            width: 100%;
+            font-size: 14px;
+        }
+
+    }
+}
+
+// End Introduction Styling
+
+// Start Free Download Section Styling
+
+.free-download {
+    padding: $sectionPadding 0;
+    position: relative;
+    @include bg-image;
+
+    .section-overlay {
+        @include overlay;
+        background-color: rgba($blackColor, 0.7);
+    }
+
+    .wrapper {
+        position: relative;
+        z-index: 99;
+
+        p {
+            color: $whiteColor;
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 2;
+            width: 59%;
+            margin: auto;
+            font-weight: map-get($fontWeights, "medium" );
+
+            @media screen and (max-width: 991px) {
+                width: 85%;
+            }
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+
+        button {
+            outline: none;
+            padding: 20px 50px;
+            border: 2px solid $whiteColor;
+            background-color: transparent;
+
+            &.hvr-sweep-to-bottom:before {
+                background: $mainColor
+            }
+
+            @media screen and (max-width: 380px) {
+                padding: 15px 35px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $whiteColor;
+                text-transform: capitalize;
+                font-weight: map-get($fontWeights, "medium" );
+                font-size: 30px;
+                letter-spacing: 1px;
+
+                @media screen and (max-width: 576px) {
+                    font-size: 26px;
+                }
+                @media screen and (max-width: 380px) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+// End Free Download Section Styling
+
+// Start About Section Styling
+
+.about {
+    padding: $sectionPadding 0;
+    background-color: $blackColor;
+    color: $whiteColor;
+
+    h2 {
+        @include secHeading;
+
+        @media screen and (max-width:576px) {
+            font-size: 28px;
+        }
+    }
+
+    p {
+        width: 45%;
+        font-weight: map-get($fontWeights, "light" );
+        font-size: 15px;
+        line-height: 2;
+        letter-spacing: 1px;
+
+        @media screen and (max-width:991px) {
+            width: 100%;
+        }
+    }
+
+    .about-feature i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+        padding: 30px;
+        background-color: $whiteColor;
+        color: $blackColor;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    .about-feat-text {
+        h3 {
+            font-size: 20px;
+            font-weight: map-get($fontWeights, "bold" );
+
+            @media screen and (max-width:576px) {
+                font-size: 15px;
+            }
+
+            @media screen and (max-width:345px) {
+                font-size: 12px;
+            }
+        }
+
+        p {
+            width: 100%;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: map-get($fontWeights, "light" );
+
+            @media screen and (max-width:576px) {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+// End About Section Styling
+
+// Start Services Section Styling
+
+.services {
+    padding: $sectionPadding 0;
+    background-color: $mainColor;
+
+    h2 {
+        @include secHeading;
+        color: $whiteColor;
+
+        @media screen and (max-width:576px) {
+            font-size: 28px;
+        }
+    }
+
+    .service-wrapper {
+        margin-bottom: 20px;
+
+        i {
+            color: $blackColor;
+            font-size: 18px;
+            width: 40px;
+            height: 40px;
+            background-color: $whiteColor;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        h3 {
+            font-size: 15px;
+            font-weight: map-get($fontWeights, "bold" );
+            margin-bottom: 20px;
+            color: $whiteColor;
+
+            @media screen and (max-width:991px) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: map-get($fontWeights, "light" );
+        color: $whiteColor;
+    }
+}
+
+// End Services Section Styling
+
+// Start Work Section Styling
+
+.work {
+    padding-top: $sectionPadding;
+    overflow: hidden;
+
+    h2 {
+        @include secHeading;
+
+        @media screen and (max-width:576px) {
+            font-size: 28px;
+        }
+    }
+
+    .portfolio {
+
+        .col-lg-3 , .col-6 {
+            padding: 0;
+        }
+
+        .portfolio-img {
+            cursor: pointer;
+            position: relative;
+
+            &:hover {
+
+                .section-overlay {
+                    @include overlay;
+                    background-color: rgba($blackColor, 0.6);
+                    transition: all 0.6s ease-in-out;
+                    -webkit-transition: all 0.6s ease-in-out;
+                    -moz-transition: all 0.6s ease-in-out;
+                    -ms-transition: all 0.6s ease-in-out;
+                    -o-transition: all 0.6s ease-in-out;
+                }
+
+                .portfolio-preview {
+                    left: 15px;
+                    transition: left 0.5s ease-in-out;
+                    -webkit-transition: left 0.5s ease-in-out;
+                    -moz-transition: left 0.5s ease-in-out;
+                    -ms-transition: left 0.5s ease-in-out;
+                    -o-transition: left 0.5s ease-in-out;
+
+                    @media screen and (max-width:576px) {
+                        left: 0;
+                    }
+                }
+            }
+
+
+            .portfolio-preview {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid $whiteColor;
+                position: absolute;
+                top: 15px;
+                left: 100%;
+                width: 90%;
+                height: 90%;
+                margin: auto;
+                color: $whiteColor;
+                
+                @media screen and (max-width:1200px) {
+                    top: 13px;
+                }
+
+                @media screen and (min-width:991px) and (max-width:1199px){
+                    top: 10px;
+                }
+
+                @media screen and (max-width:576px){
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    top: 0;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: map-get($fontWeights, "medium" );
+                    letter-spacing: 1px;
+
+                    @media screen and (max-width:576px) {
+                        font-size: 13px;
+                    }
+                }
+
+                h5 {
+                    font-size: 17px;
+                    font-weight: map-get($fontWeights, "light" );
+                    letter-spacing: 1px;
+
+                    @media screen and (max-width:576px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Start Popup Styling
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($blackColor, 0.7);
+    z-index: 12;
+}
+
+.popup-box {
+    position: fixed;
+    @include vCentering(10%);
+    @include hCentering(50%);
+    background-color: $whiteColor;
+    border: 2px solid #ccc;
+    padding: 20px 50px;
+    z-index: 1000000;
+
+    @media screen and (max-width:767px) {
+        @include vCentering(20%);
+        @include hCentering(50%)
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.close-btn {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: $mainColor;
+    background-color: $blackColor;
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-weight: bold;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+// End Popup styling
+
+// End Work Section Styling
+
+// Start Contact Section Styling
+
+.contact {
+    padding: $sectionPadding 0;
+    background-color: $menuColor;
+
+    .wrapper {
+        position: relative;
+        z-index: 99;
+
+        p {
+            color: $whiteColor;
+            font-size: 16px;
+            letter-spacing: 1px;
+            line-height: 2;
+            width: 59%;
+            margin: auto;
+            font-weight: map-get($fontWeights, "medium" );
+
+            @media screen and (max-width: 991px) {
+                width: 85%;
+            }
+
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+
+        button {
+            outline: none;
+            padding: 20px 50px;
+            border: 2px solid $whiteColor;
+            background-color: transparent;
+
+            &.hvr-sweep-to-bottom:before {
+                background: $blackColor
+            }
+
+            @media screen and (max-width: 380px) {
+                padding: 15px 35px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $whiteColor;
+                text-transform: capitalize;
+                font-weight: map-get($fontWeights, "medium" );
+                font-size: 30px;
+                letter-spacing: 1px;
+
+                @media screen and (max-width: 576px) {
+                    font-size: 26px;
+                }
+
+                @media screen and (max-width: 380px) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .modal {
+
+        visibility: visible !important;
+
+        .modal-header {
+            display: block;
+            position: relative;
+            border-bottom: 0;
+
+            h5 {
+                font-size: 25px;
+                font-weight: map-get($fontWeights, "bold" );
+                color: $blackColor;
+                letter-spacing: 1px;
+
+                @media screen and (max-width:576px) {
+                    font-size: 21px;
+                }
+            }
+
+            .close {
+                position: absolute;
+                top: 5px;
+                right: 15px;
+
+                span {
+                    font-size: 60px;
+                    font-weight: 100;
+
+                    @media screen and (max-width:576px) {
+                        font-size: 50px;
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .modal-body {
+
+            h5 {
+
+                font-size: 19px;
+                font-weight: map-get($fontWeights, "bold" );
+                color: $mainColor;
+                letter-spacing: 1px;
+            }
+
+            form {
+                
+                input , textarea {
+                    padding: 20px 10px;
+                    border: 1px solid #f5f5f5;
+                    outline: none;
+
+                    &::-webkit-input-placeholder {
+                        color: #333;
+                        font-size: 14px;
+                        font-weight: map-get($fontWeights, "light" );
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+
+                button {
+                    width: 185px;
+                    padding: 8px;
+                    background-color: $mainColor;
+                    color: $whiteColor;
+                    font-size: 22px;
+                    font-weight: map-get($fontWeights, "medium" );
+                    letter-spacing: 1px;
+                    outline: none;
+                    border: 1px solid $mainColor;
+                    border-radius: 4px;
+                    transition: all 0.4s ease-in-out;
+                    -webkit-transition: all 0.4s ease-in-out;
+                    -moz-transition: all 0.4s ease-in-out;
+                    -ms-transition: all 0.4s ease-in-out;
+                    -o-transition: all 0.4s ease-in-out;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;
+                    
+                    &:hover{
+                        background-color: $whiteColor;
+                        color: $mainColor;
+                        border: 1px solid $whiteColor;
+                    }
+                }
+            }
+
+            .info {
+
+                h5 {
+                    font-size: 18px;
+                    font-weight: map-get($fontWeights, "bold" );
+                }
+
+                h6 {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    font-weight: map-get($fontWeights, "light" );
+                    color: $blackColor;
+                }
+
+                p {
+                    font-size: 12px;
+                    color: #989797;
+                }
+
+                a {
+                    font-size: 12px;
+                    color: #989797;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .location {
+                    p {
+                        width: 80%;
+                    }
+                }
+                
+                .phone {
+                    p {
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End ContactSection Styling
+
+

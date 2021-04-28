@@ -1,0 +1,21 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden
+}
+
+
+// import variables and mixins
+@import "sass/helpers/variables";
+@import "sass/helpers/mixins";
+
+// import the main layout
+@import "sass/layout/header";
+@import "sass/layout/gridsystem";
+@import "sass/layout/footer";
+
+// import the page
+@import "sass/pages/home";
+
+// import loading page
+@import "sass/pages/loading";
+
